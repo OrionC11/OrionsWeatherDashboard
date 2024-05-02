@@ -38,6 +38,15 @@ function getWeather(lat, lon) {
     });
 }
 
+function get5Day(lat, lon) {
+  var fiveDayAPI = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIkey}&units=imperial`;
+  fetch(fiveDayAPI)
+    .then((response) => response.json())
+    .then(function (data) {
+      console.log("5 Day Data", data);
+      display5Day(data);
+    });
+}
 
 function displayWeather(data) {
   var cityWeather = document.createElement("div");
@@ -57,6 +66,52 @@ function displayWeather(data) {
   </div>`;
   currentWeather.append(cityWeather);
 }
-
+function display5Day(data) {
+  var fiveDay = document.createElement("div");
+  fiveDay.innerHTML = `<div class="fiveDay row">
+                                <h2>5 Day Forecast</h2>
+                                <div class="card day1">
+                                    <h3>${data.list[0].dt_txt}</h3>
+                                    <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png" alt="weather icon" />
+                                    <ul>
+                                        <li>Temperature: ${data.list[0].main.temp}°F</li>
+                                        <li>Humidity: ${data.list[0].main.humidity}%</li>
+                                    </ul>
+                                </div>
+                                <div class="card day2">
+                                    <h3>${data.list[1].dt_txt}</h3>
+                                    <img src="http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}.png" alt="weather icon" />
+                                    <ul>
+                                        <li>Temperature: ${data.list[1].main.temp}°F</li>
+                                        <li>Humidity: ${data.list[1].main.humidity}%</li>
+                                    </ul>
+                                </div>
+                                <div class="card day3">
+                                    <h3>${data.list[2].dt_txt}</h3>
+                                    <img src="http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}.png" alt="weather icon" />
+                                    <ul>
+                                        <li>Temperature: ${data.list[2].main.temp}°F</li>
+                                        <li>Humidity: ${data.list[2].main.humidity}%</li>
+                                    </ul>
+                                </div>
+                                <div class="card day4">
+                                    <h3>${data.list[3].dt_txt}</h3>
+                                    <img src="http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}.png" alt="weather icon" />
+                                    <ul>
+                                        <li>Temperature: ${data.list[3].main.temp}°F</li>
+                                        <li>Humidity: ${data.list[3].main.humidity}%</li>
+                                    </ul>
+                                </div>
+                                <div class="card day5">
+                                    <h3>${data.list[4].dt_txt}</h3>
+                                    <img src="http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}.png" alt="weather icon" />
+                                    <ul>
+                                        <li>Temperature: ${data.list[4].main.temp}°F</li>
+                                        <li>Humidity: ${data.list[4].main.humidity}%</li>
+                                    </ul>
+                                </div>
+                            </div>`;
+  fiveDayContainer.appendChild(fiveDay);
+}
 
 searchBtn.addEventListener("click", search);
