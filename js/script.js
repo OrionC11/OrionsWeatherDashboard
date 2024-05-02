@@ -16,7 +16,7 @@ function search(event) {
 }
 
 function cityGeo(city) {
-  var geoAPI = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
+  var geoAPI = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
   fetch(geoAPI)
     .then((response) => response.json())
     .then(function (data) {
@@ -53,7 +53,7 @@ function displayWeather(data) {
   cityWeather.innerHTML = `<div class="today">
   <div class="todayDirection">
   <h2>${data.name}</h2>
-  <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon" />
+  <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather icon" />
   </div>
   <h3>Current Weather</h3>
   <ul class="todayDetails">
@@ -73,7 +73,7 @@ function display5Day(data) {
                                 <div class="cardRow">
                                   <div class="card day1">
                                       <h3>${data.list[0].dt_txt}</h3>
-                                      <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png" alt="weather icon" />
+                                      <img src="https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png" alt="weather icon" />
                                       <ul>
                                           <li>Temperature: ${data.list[0].main.temp}°F</li>
                                           <li>Humidity: ${data.list[0].main.humidity}%</li>
@@ -83,7 +83,7 @@ function display5Day(data) {
                                   </div>
                                   <div class="card day2">
                                       <h3>${data.list[8].dt_txt}</h3>
-                                      <img src="http://openweathermap.org/img/wn/${data.list[8].weather[0].icon}.png" alt="weather icon" />
+                                      <img src="https://openweathermap.org/img/wn/${data.list[8].weather[0].icon}.png" alt="weather icon" />
                                       <ul>
                                           <li>Temperature: ${data.list[8].main.temp}°F</li>
                                           <li>Humidity: ${data.list[8].main.humidity}%</li>
@@ -93,7 +93,7 @@ function display5Day(data) {
                                   </div>
                                   <div class="card day3">
                                       <h3>${data.list[16].dt_txt}</h3>
-                                      <img src="http://openweathermap.org/img/wn/${data.list[16].weather[0].icon}.png" alt="weather icon" />
+                                      <img src="https://openweathermap.org/img/wn/${data.list[16].weather[0].icon}.png" alt="weather icon" />
                                       <ul>
                                           <li>Temperature: ${data.list[16].main.temp}°F</li>
                                           <li>Humidity: ${data.list[16].main.humidity}%</li>
@@ -103,7 +103,7 @@ function display5Day(data) {
                                   </div>
                                   <div class="card day4">
                                       <h3>${data.list[24].dt_txt}</h3>
-                                      <img src="http://openweathermap.org/img/wn/${data.list[24].weather[0].icon}.png" alt="weather icon" />
+                                      <img src="https://openweathermap.org/img/wn/${data.list[24].weather[0].icon}.png" alt="weather icon" />
                                       <ul>
                                           <li>Temperature: ${data.list[24].main.temp}°F</li>
                                           <li>Humidity: ${data.list[24].main.humidity}%</li>
@@ -113,7 +113,7 @@ function display5Day(data) {
                                   </div>
                                   <div class="card day5">
                                       <h3>${data.list[32].dt_txt}</h3>
-                                      <img src="http://openweathermap.org/img/wn/${data.list[32].weather[0].icon}.png" alt="weather icon" />
+                                      <img src="https://openweathermap.org/img/wn/${data.list[32].weather[0].icon}.png" alt="weather icon" />
                                       <ul>
                                           <li>Temperature: ${data.list[32].main.temp}°F</li>
                                           <li>Humidity: ${data.list[32].main.humidity}%</li>
