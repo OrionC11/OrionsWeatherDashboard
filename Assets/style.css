@@ -1,0 +1,73 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 10px cyan;
+    border-style: ridge;
+    border-color: cyan;
+    width: 50vw
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    border: 5px darkcyan groove;
+}
+h2 {
+    color: darkorchid;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+section {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.title{
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+}
+
+.search {
+    margin-left: 5px;
+}
+
+.todayCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.fiveDay {
+    display: flex;
+    flex-direction: column;
+}
+.cardRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: row;
+}
+.card {
+    text-align: center;
+    align-items: center;
+    border: 2px outset #151515;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 10px;
+}

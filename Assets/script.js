@@ -68,47 +68,54 @@ function displayWeather(data) {
 }
 function display5Day(data) {
   var fiveDay = document.createElement("div");
-  fiveDay.innerHTML = `<div class="fiveDay row">
-                                <h2>5 Day Forecast</h2>
-                                <div class="card day1">
-                                    <h3>${data.list[0].dt_txt}</h3>
-                                    <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png" alt="weather icon" />
-                                    <ul>
-                                        <li>Temperature: ${data.list[0].main.temp}°F</li>
-                                        <li>Humidity: ${data.list[0].main.humidity}%</li>
-                                    </ul>
-                                </div>
-                                <div class="card day2">
-                                    <h3>${data.list[1].dt_txt}</h3>
-                                    <img src="http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}.png" alt="weather icon" />
-                                    <ul>
-                                        <li>Temperature: ${data.list[1].main.temp}°F</li>
-                                        <li>Humidity: ${data.list[1].main.humidity}%</li>
-                                    </ul>
-                                </div>
-                                <div class="card day3">
-                                    <h3>${data.list[2].dt_txt}</h3>
-                                    <img src="http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}.png" alt="weather icon" />
-                                    <ul>
-                                        <li>Temperature: ${data.list[2].main.temp}°F</li>
-                                        <li>Humidity: ${data.list[2].main.humidity}%</li>
-                                    </ul>
-                                </div>
-                                <div class="card day4">
-                                    <h3>${data.list[3].dt_txt}</h3>
-                                    <img src="http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}.png" alt="weather icon" />
-                                    <ul>
-                                        <li>Temperature: ${data.list[3].main.temp}°F</li>
-                                        <li>Humidity: ${data.list[3].main.humidity}%</li>
-                                    </ul>
-                                </div>
-                                <div class="card day5">
-                                    <h3>${data.list[4].dt_txt}</h3>
-                                    <img src="http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}.png" alt="weather icon" />
-                                    <ul>
-                                        <li>Temperature: ${data.list[4].main.temp}°F</li>
-                                        <li>Humidity: ${data.list[4].main.humidity}%</li>
-                                    </ul>
+  fiveDay.innerHTML = `<div class="fiveDay">
+                                <h2 class = "cardRow">5 Day Forecast</h2>
+                                <div class="cardRow">
+                                  <div class="card day1">
+                                      <h3>${data.list[0].dt_txt}</h3>
+                                      <img src="http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png" alt="weather icon" />
+                                      <ul>
+                                          <li>Temperature: ${data.list[0].main.temp}°F</li>
+                                          <li>Humidity: ${data.list[0].main.humidity}%</li>
+                                          <li>Description: <br /> ${data.list[0].weather[0].description}</li>
+                                      </ul>
+                                  </div>
+                                  <div class="card day2">
+                                      <h3>${data.list[8].dt_txt}</h3>
+                                      <img src="http://openweathermap.org/img/wn/${data.list[8].weather[0].icon}.png" alt="weather icon" />
+                                      <ul>
+                                          <li>Temperature: ${data.list[8].main.temp}°F</li>
+                                          <li>Humidity: ${data.list[8].main.humidity}%</li>
+                                          <li>Description: <br /> ${data.list[8].weather[0].description}</li>
+                                      </ul>
+                                  </div>
+                                  <div class="card day3">
+                                      <h3>${data.list[16].dt_txt}</h3>
+                                      <img src="http://openweathermap.org/img/wn/${data.list[16].weather[0].icon}.png" alt="weather icon" />
+                                      <ul>
+                                          <li>Temperature: ${data.list[16].main.temp}°F</li>
+                                          <li>Humidity: ${data.list[16].main.humidity}%</li>
+                                          <li>Description: <br /> ${data.list[16].weather[0].description}</li>
+                                      </ul>
+                                  </div>
+                                  <div class="card day4">
+                                      <h3>${data.list[24].dt_txt}</h3>
+                                      <img src="http://openweathermap.org/img/wn/${data.list[24].weather[0].icon}.png" alt="weather icon" />
+                                      <ul>
+                                          <li>Temperature: ${data.list[24].main.temp}°F</li>
+                                          <li>Humidity: ${data.list[24].main.humidity}%</li>
+                                          <li>Description: <br /> ${data.list[24].weather[0].description}</li>
+                                      </ul>
+                                  </div>
+                                  <div class="card day5">
+                                      <h3>${data.list[32].dt_txt}</h3>
+                                      <img src="http://openweathermap.org/img/wn/${data.list[32].weather[0].icon}.png" alt="weather icon" />
+                                      <ul>
+                                          <li>Temperature: ${data.list[32].main.temp}°F</li>
+                                          <li>Humidity: ${data.list[32].main.humidity}%</li>
+                                          <li>Description: <br /> ${data.list[32].weather[0].description}</li>
+                                      </ul>
+                                  </div>
                                 </div>
                             </div>`;
   fiveDayContainer.appendChild(fiveDay);
