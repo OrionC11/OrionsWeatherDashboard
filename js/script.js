@@ -4,6 +4,7 @@ const userCity = document.querySelector("#userCity");
 const searchBtn = document.querySelector("#searchBtn");
 const currentWeather = document.querySelector("#currentWeather");
 const fiveDayContainer = document.querySelector("#fiveDayForecast");
+const main = document.querySelector("main");
 
 function search(event) {
   event.preventDefault();
@@ -50,6 +51,7 @@ function get5Day(lat, lon) {
 
 function displayWeather(data) {
   var cityWeather = document.createElement("div");
+  main.style.display = "inline";
   cityWeather.innerHTML = `<div class="today">
   <div class="todayDirection">
   <h2>${data.name}</h2>
