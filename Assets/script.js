@@ -77,6 +77,7 @@ function display5Day(data) {
                                       <ul>
                                           <li>Temperature: ${data.list[0].main.temp}°F</li>
                                           <li>Humidity: ${data.list[0].main.humidity}%</li>
+                                          <li>Wind Speed: ${data.list[0].wind.speed} MPH</li>
                                           <li>Description: <br /> ${data.list[0].weather[0].description}</li>
                                       </ul>
                                   </div>
@@ -86,6 +87,7 @@ function display5Day(data) {
                                       <ul>
                                           <li>Temperature: ${data.list[8].main.temp}°F</li>
                                           <li>Humidity: ${data.list[8].main.humidity}%</li>
+                                          <li>Wind Speed: ${data.list[8].wind.speed} MPH</li>
                                           <li>Description: <br /> ${data.list[8].weather[0].description}</li>
                                       </ul>
                                   </div>
@@ -95,6 +97,7 @@ function display5Day(data) {
                                       <ul>
                                           <li>Temperature: ${data.list[16].main.temp}°F</li>
                                           <li>Humidity: ${data.list[16].main.humidity}%</li>
+                                          <li>Wind Speed: ${data.list[16].wind.speed} MPH </li>
                                           <li>Description: <br /> ${data.list[16].weather[0].description}</li>
                                       </ul>
                                   </div>
@@ -104,6 +107,7 @@ function display5Day(data) {
                                       <ul>
                                           <li>Temperature: ${data.list[24].main.temp}°F</li>
                                           <li>Humidity: ${data.list[24].main.humidity}%</li>
+                                          <li>Wind Speed: ${data.list[24].wind.speed} MPH</li>
                                           <li>Description: <br /> ${data.list[24].weather[0].description}</li>
                                       </ul>
                                   </div>
@@ -113,6 +117,7 @@ function display5Day(data) {
                                       <ul>
                                           <li>Temperature: ${data.list[32].main.temp}°F</li>
                                           <li>Humidity: ${data.list[32].main.humidity}%</li>
+                                          <li>Wind Speed: ${data.list[32].wind.speed} MPH</li>
                                           <li>Description: <br /> ${data.list[32].weather[0].description}</li>
                                       </ul>
                                   </div>
